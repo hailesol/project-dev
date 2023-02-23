@@ -58,3 +58,55 @@ footer {
     padding: 10px;
     text-align: center;
 }
+.bike {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.front-wheel, .back-wheel {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #333;
+  background-color: #fff;
+  animation: spin 2s linear infinite;
+}
+
+.back-wheel {
+  left: 170px;
+}
+
+.ground {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(to right, #333 10%, transparent 10%),
+                    linear-gradient(to right, #333 25%, transparent 25%),
+                    linear-gradient(to right, #333 40%, transparent 40%),
+                    linear-gradient(to right, #333 55%, transparent 55%),
+                    linear-gradient(to right, #333 70%, transparent 70%);
+  background-size: 20px 50px;
+  animation: move 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  100% {
+    background-position: 20px 0, 20px 0, 20px 0, 20px 0, 20px 0;
+  }
+}
