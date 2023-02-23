@@ -58,32 +58,31 @@ footer {
     padding: 10px;
     text-align: center;
 }
-.typewriter {
+.typewriter h1 {
   overflow: hidden;
-  animation: typing 1s steps(20) infinite;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  /* The typing effect */
 }
 
-.typewriter:after {
-  content: "|"; /* add a cursor at the end of the text */
-  display: inline-block;
-  animation: blink 1s infinite; /* animate the cursor to blink */
-}
-
+/* The typing effect */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0 }
+  to { width: 100% }
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.typewriter.restart {
-  animation-delay: 3s; /* add a delay of 3 seconds before restarting the animation */
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
