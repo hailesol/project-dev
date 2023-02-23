@@ -59,15 +59,31 @@ footer {
     text-align: center;
 }
 .typewriter {
-  overflow: hidden; /* hides the letters that will be revealed one by one */
-  animation: typing 1s steps(20) infinite; /* use the "typing" animation with 20 steps and repeat it infinitely */
+  overflow: hidden;
+  animation: typing 1s steps(20) infinite;
+}
+
+.typewriter:after {
+  content: "|"; /* add a cursor at the end of the text */
+  display: inline-block;
+  animation: blink 1s infinite; /* animate the cursor to blink */
 }
 
 @keyframes typing {
   from {
-    width: 0; /* start with 0 width */
+    width: 0;
   }
   to {
-    width: 100%; /* end with full width */
+    width: 100%;
   }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter.restart {
+  animation-delay: 3s; /* add a delay of 3 seconds before restarting the animation */
 }
