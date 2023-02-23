@@ -60,81 +60,84 @@ footer {
 }
 .bike {
   position: relative;
-  margin: 50px auto;
-  width: 300px;
-  height: 200px;
+  margin-top: 50px;
 }
 
 .frame {
-  position: relative;
-  width: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
   height: 100px;
-  margin: 0 auto;
+  margin-top: -50px;
+  margin-left: -100px;
   background-color: #333;
-  border-radius: 5px;
-  z-index: 1;
+  border-radius: 10px;
 }
 
 .saddle {
   position: absolute;
-  top: 10px;
-  left: 60px;
-  width: 50px;
-  height: 30px;
-  background-color: #333;
+  top: 25px;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  margin-left: -20px;
+  background-color: #777;
   border-radius: 5px;
-  z-index: 2;
 }
 
 .handlebars {
   position: absolute;
-  top: 10px;
-  left: 170px;
-  width: 50px;
-  height: 30px;
-  background-color: #333;
+  top: 15px;
+  left: 50%;
+  width: 80px;
+  height: 10px;
+  margin-left: -40px;
+  background-color: #777;
   border-radius: 5px;
-  z-index: 2;
 }
 
 .wheel {
   position: absolute;
+  top: 50%;
   width: 100px;
   height: 100px;
+  margin-top: -50px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 5px solid #333;
-  z-index: 1;
-  animation: spin 1s infinite linear;
+}
+
+.front-wheel {
+  left: 100px;
+}
+
+.back-wheel {
+  left: 0;
 }
 
 .rim {
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
   border-radius: 50%;
-  background-color: #333;
-  z-index: 2;
+  border: 10px solid #ccc;
 }
 
 .hub {
   position: absolute;
-  top: 40px;
-  left: 40px;
   width: 20px;
   height: 20px;
+  margin: 40px;
   background-color: #333;
   border-radius: 50%;
-  z-index: 3;
 }
 
 .spoke {
   position: absolute;
-  width: 5px;
-  height: 45px;
-  background-color: #333;
+  width: 2px;
+  height: 50px;
+  background-color: #ccc;
   transform-origin: bottom center;
-  z-index: 4;
 }
 
 .spoke-1 {
@@ -161,21 +164,22 @@ footer {
   transform: rotate(180deg);
 }
 
-.front-wheel {
-  top: 85px;
-  left: 50px;
+.spoke-7 {
+  transform: rotate(210deg);
 }
 
-.back-wheel {
-  top: 85px;
-  right: 50px;
+.spoke-8 {
+  transform: rotate(240deg);
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spoke-9 {
+  transform: rotate(270deg);
+}
+
+.spoke-10 {
+  transform: rotate(300deg);
+}
+
+.spoke-11 {
+  transform: rotate(330deg);
 }
